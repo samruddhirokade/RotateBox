@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RotateBox</title>
+
+	<style>
+	
+
+		.container{
+			height: 200px;
+
+			width: 200px;
+
+			margin: 10%;
+
+			background-color:purple;
+
+			transition-duration:2s;
+
+
+
+
+		}
+
+		.rotateAni
+		{
+			animation: rotate 1s linear infinite;
+		}
+
+		@keyframes rotate{
+		      100%{
+			
+				transform: rotate(360deg);
+			}
+			
+		}	
+	</style>	
+
+	
+</head>
+<body>
+
+	<div class="container" onclick="addAnimation()">
+	</div>
+
+		<script type="text/javascript">
+			
+
+			function addAnimation() 
+			{
+
+				let divi=document.getElementsByClassName("container")[0];
+				let classValue = divi.getAttribute("class");
+
+
+				if(classValue =="container")
+				{
+					divi.setAttribute("class","container rotateAni");
+				}
+				else
+				{
+					divi.setAttribute("class","container");
+
+				}
+			}
+		</script>
+
+</body>
+</html>
